@@ -22,20 +22,7 @@ import java.util.Map;
 public class EulerProblem14 {
 
   public static void main(String... args) {
-
-    System.out.println(longestSequenceStart(10));
-    System.out.println(longestSequenceStart(100));
-    System.out.println(longestSequenceStart(1_000));
-    System.out.println(longestSequenceStart(10_000));
-    System.out.println(longestSequenceStart(100_000));
     System.out.println(longestSequenceStart(1_000_000));
-
-    printSequenceLengths(9);
-    printSequenceLengths(97);
-    printSequenceLengths(871);
-    printSequenceLengths(6171);
-    printSequenceLengths(77031);
-    printSequenceLengths(910107);
   }
 
   private static int longestSequenceStart(int N) {
@@ -112,18 +99,5 @@ public class EulerProblem14 {
     } else {
       return 3 * n + 1;
     }
-  }
-
-  private static void printSequenceLengths(long start) {
-
-    long c = start;
-    int length = 0;
-
-    while (c > 1) {
-      c = sequenceNext(c);
-      length++;
-    }
-
-    System.out.format("length %d\n", length);
   }
 }
